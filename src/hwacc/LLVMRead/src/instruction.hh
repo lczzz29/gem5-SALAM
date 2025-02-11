@@ -866,7 +866,7 @@ class Load : public Instruction {
     private:
         std::vector< std::vector<uint64_t> > conditions;
         // conditions.at[0] == base params
-        uint64_t align;
+        llvm::Align align;
         SALAM::Debugger *dbgr;
         uint64_t currentCycle;
         bool loadingInternal = false;
@@ -905,7 +905,7 @@ class Store : public Instruction {
     private:
         std::vector< std::vector<uint64_t> > conditions;
         // conditions.at[0] == base params
-        uint64_t align;
+        llvm::Align align;
         SALAM::Debugger *dbgr;
         uint64_t currentCycle;
 

@@ -1903,7 +1903,7 @@ Load::initialize(llvm::Value * irval,
     SALAM::Instruction::initialize(irval, irmap, valueList);
     // ****** //
     llvm::LoadInst * inst = llvm::dyn_cast<llvm::LoadInst>(irval);
-    this->align = inst->getAlignment();
+    this->align = inst->getAlign();
     if (staticDependencies.front()->isGlobalConstant()) loadingInternal = true;
 }
 
@@ -1966,7 +1966,7 @@ Store::initialize(llvm::Value * irval,
     SALAM::Instruction::initialize(irval, irmap, valueList);
     // ****** //
     llvm::StoreInst * inst = llvm::dyn_cast<llvm::StoreInst>(irval);
-    this->align = inst->getAlignment();
+    this->align = inst->getAlign();
 }
 
 void
