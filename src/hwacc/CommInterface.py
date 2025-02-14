@@ -10,7 +10,7 @@ class CommInterface(BasicPioDevice):
     config_size = Param.Addr(0x0, "Size of the addess range dedicated to device configuration")
     pio_size = Param.Addr(0x8, "Size of MMRs. Should be large enough to support flags, config, and global var addresses")
     devicename = Param.String("comm_interface", "Name of comm_interface device")
-    local = VectorRequestPort("Master points connected to the local cluster xbar")
+    local = VectorRequestPort("Master ports connected to the local cluster xbar")
     acp = VectorRequestPort("Master ports connected to the cluster coherency xbar")
     stream = VectorRequestPort("Master ports connected to streaming devices")
     spm = VectorRequestPort("Master ports connected to private scratchpad memory")
