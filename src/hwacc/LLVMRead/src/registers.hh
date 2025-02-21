@@ -1,6 +1,7 @@
 #ifndef __HWACC_REGISTERS_HH__
 #define __HWACC_REGISTERS_HH__
 
+#include <math.h>
 #include "debug_flags.hh"
 #include "llvm/IR/Value.h"
 #include "llvm/IR/GlobalVariable.h"
