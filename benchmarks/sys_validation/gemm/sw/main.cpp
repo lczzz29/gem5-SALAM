@@ -7,6 +7,7 @@
 
 gemm_struct ges;
 
+volatile int stage;
 volatile uint8_t  * top   = (uint8_t  *)(TOP + 0x00);
 volatile uint32_t * val_a = (uint32_t *)(TOP + 0x01);
 volatile uint32_t * val_b = (uint32_t *)(TOP + 0x09);

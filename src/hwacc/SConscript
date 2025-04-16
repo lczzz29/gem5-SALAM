@@ -85,6 +85,11 @@ if env['TARGET_ISA'] == 'arm':
     DebugFlag('Trace')
     DebugFlag('Step')
 
+    # MLIR related flags
+    DebugFlag('MLIRParse')
+    DebugFlag('MLIRInterface')
+    DebugFlag('MULA_Debug')
+
     #
-    CompoundFlag('JDEV', ['LLVMInterface','CommInterface', 'Runtime', 'RuntimeCompute', 'RuntimeQueues', 'SALAM_Debug'])
-    CompoundFlag('HWACC', ['CommInterface', 'LLVMInterface'])
+    CompoundFlag('JDEV', ['MULA_Debug', 'MLIRInterface', 'LLVMInterface','CommInterface', 'Runtime', 'RuntimeCompute', 'RuntimeQueues', 'SALAM_Debug'])
+    CompoundFlag('HWACC', ['CommInterface', 'LLVMInterface', 'MLIRInterface'])

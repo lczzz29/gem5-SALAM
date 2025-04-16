@@ -15,6 +15,7 @@ bfs_struct bfs;
 #define COUNT_OFFSET LEVEL_OFFSET + sizeof(level_t)      * N_NODES
 #define CHECK_OFFSET COUNT_OFFSET + sizeof(edge_index_t) * N_LEVELS
 
+volatile int stage;
 volatile uint8_t      * top        = (uint8_t      *)(TOP);
 volatile uint32_t     * NODES_ADDR = (uint32_t     *)(TOP+1);
 volatile uint32_t     * EDGES_ADDR = (uint32_t     *)(TOP+9);

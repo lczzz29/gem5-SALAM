@@ -14,6 +14,7 @@ nw_struct nws;
 #define CHECKA_OFF  ALIB_OFF   + (ALEN+BLEN)
 #define CHECKB_OFF  CHECKA_OFF + (ALEN+BLEN)
 
+volatile int stage;
 volatile uint8_t * top        = (uint8_t *)(TOP + 0x00);
 volatile int32_t * val_seqa   = (int32_t *)(TOP + 0x01);
 volatile int32_t * val_seqb   = (int32_t *)(TOP + 0x09);

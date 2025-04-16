@@ -16,6 +16,7 @@ fft_struct ffts;
 #define RCHK_OFFSET     24*FFT_SIZE
 #define ICHK_OFFSET     32*FFT_SIZE
 
+volatile int stage;
 volatile uint8_t  * top           = (uint8_t  *)(TOP);
 volatile uint32_t * loc_real      = (uint32_t *)(TOP+1);
 volatile uint32_t * loc_img       = (uint32_t *)(TOP+9);
